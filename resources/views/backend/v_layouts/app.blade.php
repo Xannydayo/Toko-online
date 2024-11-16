@@ -26,6 +26,7 @@
     />
     <link href="{{ asset('backend/matrix-admin/dist/css/style.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('matrix-admin/dist/css/style.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -148,18 +149,27 @@
             </footer>
         </div>
     </div>
-    <script src="{{ asset('matrix-admin/assets/libs/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ asset('matrix-admin/assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('matrix-admin/dist/js/waves.js') }}"></script>
-    <script src="{{ asset('matrix-admin/dist/js/sidebarmenu.js') }}"></script>
-    <script src="{{ asset('matrix-admin/dist/js/custom.js') }}"></script>
+    <script src="{{ asset('backend/matrix-admin/assets/libs/jquery/dist/jquery.min.js') }}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{{ asset('backend/matrix-admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{{ asset('backend/matrix-admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
+    <script src="{{ asset('backend/matrix-admin/assets/extra-libs/sparkline/sparkline.js') }}"></script>
+    <!--Wave Effects -->
+    <script src="{{ asset('backend/matrix-admin/dist/js/waves.js') }}"></script>
+    <!--Menu sidebar -->
+    <script src="{{ asset('backend/matrix-admin/dist/js/sidebarmenu.js') }}"></script>
+    <!--Custom JavaScript -->
+    <script src="{{ asset('backend/matrix-admin/dist/js/custom.min.js') }}"></script>
+    <!-- this page js -->
     <script src="{{ asset('backend/matrix-admin/assets/extra-libs/multicheck/datatable-checkbox-init.js') }}"></script>
     <script src="{{ asset('backend/matrix-admin/assets/extra-libs/multicheck/jquery.multicheck.js') }}"></script>
     <script src="{{ asset('backend/matrix-admin/assets/extra-libs/DataTables/datatables.min.js') }}"></script>
-    <script>
-        $('#zero_config').DataTable();
-    </script>
-
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    @stack('scripts')
 </body>
 
 </html>
