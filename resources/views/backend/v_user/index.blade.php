@@ -8,10 +8,6 @@
             <a href="{{ route('backend.user.create') }}" class="btn btn-primary">
                 <i class="fas fa-plus"></i> Tambah Data
             </a>
-            <form action="{{ route('backend.user.index') }}" method="GET" class="form-inline">
-                <input type="text" name="search" class="form-control" placeholder="Search" aria-label="Search">
-                <button type="submit" class="btn btn-secondary ml-2">Search</button>
-            </form>
         </div>
         <div class="card mt-3">
             <div class="card-body">
@@ -71,3 +67,27 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $('#zero_config').DataTable({
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "language": {
+                "lengthMenu": "Tampilkan _MENU_ entries",
+                "search": "Cari:",
+                "paginate": {
+                    "first": "Pertama",
+                    "last": "Terakhir",
+                    "next": "Selanjutnya",
+                    "previous": "Sebelumnya"
+                }
+            },
+            "processing": true,
+            "pageLength": 10,
+            "responsive": true,
+            "dom": '<"top"lf>rt<"bottom"ip><"clear">'
+        });
+    });
+</script>
+@endpush
